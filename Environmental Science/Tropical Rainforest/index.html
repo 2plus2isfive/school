@@ -3,36 +3,63 @@
   <head>
     <style>
       @import url("https://2plus2isfive.github.io/css/reset.css");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+      html,
       body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        overscroll-behavior: none;
+        display: flex;
+        flex-direction: column;
       }
       .page {
         width: 100%;
         height: 100vh;
-        padding: 4%;
+        position: relative;
       }
-      .pg01 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 32px;
-        font-weight: 600;
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(50%);
+      }
+      .bg__gradient {
+        background: linear-gradient(to top, #000000aa, transparent, transparent);
+        width: 100%;
+        height: 100%;
+      }
+      #pg01 {
       }
       .pg02 {
+      }
+      #pg03 {
+      }
+      h1 {
+        width: 100%;
+        height: 100%;
         display: flex;
-        gap: 4%;
-      }
-      .txtbox {
-        width: 50%;
-        overflow-y: scroll;
-        height: 100%;
-      }
-      .titleBox {
-        width: 50%;
-        height: 100%;
-        text-align: center;
-        font-size: 48px;
+        justify-content: end;
+        align-items: start;
+        font-size: 6vw;
         font-weight: 600;
+        filter: drop-shadow(2px 2px 0 #000);
+        font-family: "IBM Plex Mono";
+        flex-direction: column;
+        padding: 0 0 0 4%;
+      }
+      .by_me {
+        font-size: 2vw;
+        font-weight: 400;
+        padding: 12px 0 4% 1%;
+      }
+      .content {
+        padding: 4%;
+        text-shadow: 1px 1px 0 #000, 0 0 2px #000;
+        font-size: 24px;
+        line-height: 1.3;
       }
     </style>
     <meta charset="UTF-8" />
@@ -41,47 +68,18 @@
   </head>
   <body>
     <div class="page pg01">
-      <h1>Tropical Rainforest</h1>
+      <div class="bg" style="background-image: url('aerial.jpg')">
+        <div class="bg__gradient"></div>
+      </div>
+      <h1>Tropical Rainforest<br /><span class="by_me">by Parker</span></h1>
     </div>
     <div class="page pg02">
-      <div class="titleBox">
-        <h2>Tropical Rainforest</h2>
-      </div>
-      <div class="txtbox">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, enim labore odio quos quisquam dolorem officiis delectus
-        sapiente id provident quam voluptate cupiditate commodi, illum consequatur reprehenderit blanditiis cumque? Iusto sint
-        commodi placeat nihil aut molestiae ad doloremque dolor blanditiis. Voluptas consequatur soluta at, incidunt possimus
-        facilis saepe animi provident porro perspiciatis libero ex quis ea. Eum nihil omnis molestias atque harum illum, ullam
-        sequi, alias mollitia fugit dignissimos illo aliquid quam quaerat minus reiciendis. Tenetur rem ea obcaecati reiciendis!
-        Quod nesciunt suscipit, mollitia, tenetur amet possimus nemo aut distinctio eaque molestias officia aperiam recusandae, ea
-        sit a nihil cum rem cumque maxime odio eius saepe. Ipsam, autem eius temporibus commodi nostrum sapiente! Quas dolore,
-        illum sunt quod blanditiis consectetur, ea natus aperiam alias dolorem optio doloremque accusamus eos iusto fuga cumque
-        eius reprehenderit necessitatibus sequi at, veritatis itaque. Quae repellendus atque nulla qui quo dolores aperiam,
-        excepturi ipsam nam inventore similique hic sunt, eveniet temporibus debitis eos delectus error provident perferendis
-        odit. Facere assumenda iste nobis odio accusantium inventore reprehenderit natus, explicabo illum commodi, eligendi
-        accusamus vel, labore nisi aperiam provident. Quibusdam ipsam iusto esse reiciendis dolores? Exercitationem cum rem dolor
-        quibusdam. Cupiditate autem iure culpa ipsa esse suscipit deleniti vitae fuga placeat corporis obcaecati hic non
-        quibusdam, minima voluptatem blanditiis aspernatur, explicabo soluta sit quod earum magnam minus quisquam deserunt.
-        Accusantium voluptates quis eum dicta veritatis explicabo distinctio blanditiis corporis vel totam, perferendis iste
-        reiciendis inventore labore assumenda nisi, minima dolor quam facere odit? Iure, esse optio eius quasi tenetur non earum
-        sit. Dolores praesentium doloremque quo laudantium aut minus. Nisi facere in veniam saepe assumenda eos autem architecto
-        culpa voluptatum. Quas sequi minima quod fugit voluptas reiciendis omnis quo. Dolores, aspernatur voluptatum sint
-        laudantium quos natus reprehenderit amet tempora magnam ducimus, magni provident nesciunt illum dolorum? Quos dolorum
-        distinctio aut aliquam sint, minima, commodi possimus expedita, provident ullam temporibus molestiae explicabo facere
-        repudiandae. Atque culpa sint iure expedita enim temporibus esse in natus nulla quasi quod dolor corrupti consequatur
-        cupiditate nemo asperiores at quis repellendus, assumenda fuga optio quas, illo omnis! Iure explicabo aspernatur aliquid
-        veritatis autem quasi at perspiciatis accusantium! Accusantium, reprehenderit quos non perspiciatis beatae laudantium
-        voluptate ullam at mollitia dolorum, provident inventore cum exercitationem deleniti officiis ducimus, aliquid recusandae
-        omnis? Velit exercitationem aliquam cum dolorem debitis. Voluptatem numquam quo, quidem ipsum sunt magnam quisquam ut
-        deserunt doloremque iste doloribus, unde praesentium sit consectetur impedit illum ea ab deleniti cumque aperiam molestias
-        quaerat esse? Nihil perferendis qui dignissimos eveniet neque quisquam temporibus, facilis ducimus modi quo dolor optio
-        autem! Ex, nisi? Rem libero rerum animi iusto error sint beatae totam, ratione quisquam repellendus voluptatum ullam
-        assumenda voluptate aspernatur doloremque delectus eligendi accusantium odio officia distinctio ipsam accusamus aperiam
-        recusandae suscipit! Corporis fugit voluptatem veritatis perferendis consectetur est temporibus neque, quia dolorem
-        laudantium aut accusamus doloribus minima. Fuga nam accusantium quidem aut officia nihil culpa aliquam saepe voluptatibus
-        libero? Veniam ratione nobis adipisci eos culpa aliquid impedit ipsum perspiciatis nisi, facere a neque mollitia! Velit,
-        commodi.
-      </div>
+      <div class="bg" style="background-image: url('river.jpg')"></div>
+      <div class="content">Tropical Rainforest is in South America and Central Asia.</div>
+    </div>
+    <div class="page pg03">
+      <div class="bg" style="background-image: url('fog.jpg')"></div>
+      <div class="content">Tropical Rainforests have very strange weather.</div>
     </div>
   </body>
 </html>
