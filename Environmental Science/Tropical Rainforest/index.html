@@ -1,97 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <style>
-      @import url("https://2plus2isfive.github.io/css/reset.css");
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-      html,
-      body {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #fff;
-        overscroll-behavior: none;
-        display: flex;
-        flex-direction: column;
-      }
-      .page {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
-      .next {
-        position: absolute;
-        bottom: 12px;
-        right: 12px;
-        background-color: #ffffff10;
-        border-radius: 50%;
-        width: 64px;
-        height: 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: 600;
-        z-index: 1000;
-        backdrop-filter: blur(2px);
-      }
-      .bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(50%);
-      }
-      .bg__gradient {
-        background: linear-gradient(to top, #000000aa, transparent, transparent);
-        width: 100%;
-        height: 100%;
-      }
-      h1 {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: start;
-        font-size: 6vw;
-        font-weight: 600;
-        filter: drop-shadow(2px 2px 0 #000);
-        font-family: "IBM Plex Mono";
-        flex-direction: column;
-        padding: 0 0 0 4%;
-      }
-      .by_me {
-        font-size: 2vw;
-        font-weight: 400;
-        padding: 12px 0 4% 1%;
-      }
-      .content {
-        padding: 4%;
-        text-shadow: 1px 1px 0 #000, 0 0 2px #000;
-        font-size: 24px;
-        line-height: 1.3;
-      }
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tropical Rainforest</title>
-  </head>
-  <body>
-    <div class="page" id="pg01">
-      <div class="bg" style="background-image: url('aerial.jpg')">
-        <div class="bg__gradient"></div>
-      </div>
-      <h1>Tropical Rainforest<br /><span class="by_me">by Parker</span></h1>
-      <a href="#pg02" class="next">V</a>
+
+<head>
+  <style>
+    @import url("https://2plus2isfive.github.io/css/reset.css");
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+    * {
+      user-select: none;
+    }
+
+    html,
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #fff;
+      overscroll-behavior: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    .next {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background-color: #ffffff10;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      z-index: 1000;
+      backdrop-filter: blur(2px);
+    }
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(50%);
+    }
+
+    .bg__gradient {
+      background: linear-gradient(to top, #000000aa, transparent, transparent);
+      width: 100%;
+      height: 100%;
+    }
+
+    h1 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+      font-size: 6vw;
+      font-weight: 600;
+      filter: drop-shadow(2px 2px 0 #000);
+      font-family: "IBM Plex Mono";
+      flex-direction: column;
+      padding: 0 0 0 4%;
+    }
+
+    .by_me {
+      font-size: 2vw;
+      font-weight: 400;
+      padding: 12px 0 4% 1%;
+    }
+
+    .content {
+      padding: 4%;
+      text-shadow: 1px 1px 0 #000, 0 0 2px #000;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    .web {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tropical Rainforest</title>
+</head>
+
+<body>
+  <!-- Slide 1: Title -->
+  <div class="page" id="pg01">
+    <div class="bg" style="background-image: url('aerial.jpg')">
+      <div class="bg__gradient"></div>
     </div>
-    <div class="page" id="pg02">
-      <div class="bg" style="background-image: url('river.jpg')"></div>
-      <div class="content">Tropical Rainforests are in South America and Central Asia.</div>
-      <a href="#pg03" class="next">V</a>
+    <h1>Tropical Rainforest<br /><span class="by_me">by Parker</span></h1>
+    <a href="#pg02" class="next">V</a>
+  </div>
+
+  <!-- Slide 2: Locations -->
+  <div class="page" id="pg02">
+    <div class="bg" style="background-image: url('cool-a-thing.jpg')"></div>
+    <div class="content">
+      <b>3 Locations of Tropical Rainforest:</b><br>
+      <ul>
+        <li>Amazon Basin in South America</li>
+        <li>Congo Basin in Africa</li>
+        <li>Southeast Asia</li>
+      </ul>
     </div>
-    <div class="page" id="pg03">
-      <div class="bg" style="background-image: url('fog.jpg')"></div>
-      <div class="content">Tropical Rainforests have very strange weather.</div>
-      <a href="#pg04" class="next">V</a>
+    <a href="#pg03" class="next">V</a>
+  </div>
+
+  <!-- Slide 3: Weather/Climate -->
+  <div class="page" id="pg03">
+    <div class="bg" style="background-image: url('fog.jpg')"></div>
+    <div class="content">
+      <b>Weather & Climate:</b><br>
+      <ul>
+        <li>Temperature: 68-93 degrees fahrenheit</li>
+        <li>Weather: Warm, humid, a lot of rain</li>
+        <li>Precipitation: 69-157 inches every year</li>
+      </ul>
     </div>
-  </body>
+    <a href="#pg04" class="next">V</a>
+  </div>
+
+  <!-- Slide 4: 3 Plants with Pictures & Adaptations -->
+  <div class="page" id="pg04">
+    <div class="bg" style="background-image: url('shiny-river.jpg')"></div>
+    <div class="content">
+      <b>3 Plants & Adaptations:</b><br>
+      <ul>
+        <li><b>Kapok Tree</b>: Tall, broad leaves for sunlight, buttress roots for stability</li>
+        <li><b>Bromeliads</b>: Leaves form water tanks, adapted to grow on trees</li>
+        <li><b>Orchids</b>: Aerial roots absorb moisture, grow on branches</li>
+      </ul>
+      <i>(Images are representative, not actual plant photos)</i>
+    </div>
+    <a href="#pg05" class="next">V</a>
+  </div>
+
+  <!-- Slide 5: 3 Animals with Pictures & Adaptations -->
+  <div class="page" id="pg05">
+    <div class="bg" style="background-image: url('waterfall.webp')"></div>
+    <div class="content">
+      <b>3 Animals & Adaptations:</b><br>
+      <ul>
+        <li><b>Jaguar</b>: Camouflage fur, strong jaws for hunting</li>
+        <li><b>Poison Dart Frog</b>: Bright colors warn predators, toxins for defense</li>
+        <li><b>Sloth</b>: Slow movement avoids predators, algae grows on fur for camouflage</li>
+      </ul>
+      <i>(Images are representative, not actual animal photos)</i>
+    </div>
+    <a href="#pg06" class="next">V</a>
+  </div>
+
+  <!-- Slide 6: Sample Food Chain -->
+  <div class="page" id="pg06">
+    <div class="bg" style="background-image: url('more-fog.webp')"></div>
+    <div class="content">
+      <b>Sample Food Chain:</b><br>
+      Leaf → Grasshopper → Frog → Snake → Jaguar
+    </div>
+    <a href="#pg07" class="next">V</a>
+  </div>
+
+  <!-- Slide 7: Sample Food Web -->
+  <div class="page" id="pg07">
+    <div class="bg" style="background-image: url('aerial.jpg')"></div>
+    <div class="content">
+      <b>Sample Food Web:</b><br>
+      <ul>
+        <li>Producers: Leaves, fruits</li>
+        <li>Primary consumers: Grasshopper, monkey, sloth</li>
+        <li>Secondary consumers: Frog, bird, bat</li>
+        <li>Tertiary consumers: Snake, jaguar</li>
+      </ul>
+      <img src="web.png" class="web">
+    </div>
+    <a href="#pg08" class="next">V</a>
+  </div>
+
+  <!-- Slide 8: Biotic Factors -->
+  <div class="page" id="pg08">
+    <div class="bg" style="background-image: url('cool-a-thing.jpg')"></div>
+    <div class="content">
+      <b>3 Biotic Factors:</b><br>
+      <ul>
+        <li>Trees (Kapok, Mahogany)</li>
+        <li>Animals (Jaguar, Sloth)</li>
+        <li>Fungi (Mushrooms, Decomposers)</li>
+      </ul>
+    </div>
+    <a href="#pg09" class="next">V</a>
+  </div>
+
+  <!-- Slide 9: Abiotic Factors -->
+  <div class="page" id="pg09">
+    <div class="bg" style="background-image: url('fog.jpg')"></div>
+    <div class="content">
+      <b>3 Abiotic Factors:</b><br>
+      <ul>
+        <li>Rainfall</li>
+        <li>Temperature</li>
+        <li>Soil type</li>
+      </ul>
+    </div>
+    <a href="#pg10" class="next">V</a>
+  </div>
+
+  <!-- Slide 10: Ecological Issues -->
+  <div class="page" id="pg10">
+    <div class="bg" style="background-image: url('shiny-river.jpg')"></div>
+    <div class="content">
+      <b>3 Ecological Issues:</b><br>
+      <ul>
+        <li>Deforestation</li>
+        <li>Species going extinct</li>
+        <li>Climate change</li>
+      </ul>
+    </div>
+    <a href="#pg11" class="next">V</a>
+  </div>
+
+  <!-- Slide 11: Activities -->
+  <div class="page" id="pg11">
+    <div class="bg" style="background-image: url('waterfall.webp')"></div>
+    <div class="content">
+      <b>3 Activities in the Rainforest:</b><br>
+      <ul>
+        <li>Wildlife watching</li>
+        <li>Canopy tours/ziplining</li>
+        <li>River boat tours</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Slide 12: References -->
+  <div class="page" id="pg12">
+    <div class="bg" style="background-image: url('fog.jpg')"></div>
+    <div class="content">
+      <b>References:</b><br>
+      <ul>
+        <li><a href="https://rainforests.mongabay.com/">rainforests.mongabay.com</a></li>
+        <li><a href="https://education.nationalgeographic.org/resource/rain-forest/">National Geographic</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
 </html>
